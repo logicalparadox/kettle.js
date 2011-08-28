@@ -1,7 +1,7 @@
 require('smoosh').config({
   "JAVASCRIPT": {
     "DIST_DIR": "./",
-    "drag": [
+    "kettle": [
       "./src/copyright.js",
       "./src/kettle.js"
     ]

@@ -3,6 +3,7 @@
   <head>
     <title>Kettle.js - Simple Scroll Widgets for JavaScript</title>
     <script src="../support/drag.js/drag.js"></script>
+    <script src="../support/move.js/move.min.js"></script>
     <script src="../src/kettle.js"></script>
     
     <style>
@@ -79,7 +80,8 @@
       }
       
       .scrollable {
-        height: 200px;
+        height: 400px;
+        width: 300px;
         overflow: hidden;
         border: 1px #aaa solid;
         position: relative;
@@ -134,6 +136,7 @@
       </div>
       <script>
         kettle('#container1')
+          .elastic()
           .bind();
       </script>
     </div>

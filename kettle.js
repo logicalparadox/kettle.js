@@ -1,3 +1,8 @@
+/*!
+  * kettle.js - copyright Jake Luer 2011
+  * https://github.com/logicalparadox/kettle.js
+  * MIT License
+  */
 !function (context, doc) {
   if ('undefined' == typeof drag) drag = require('drag');
   if ('undefined' == typeof bean) bean = require('bean');

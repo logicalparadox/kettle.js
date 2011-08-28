@@ -10,12 +10,13 @@
     "url": "https://github.com/logicalparadox/kettle.js"
   },
   "dependencies": {
+    "bean": ">= 0.2.7",
     "drag": ">= 0.0.3"
   },
   "devDependencies": {
     "smoosh": "0.3.x"
   },
-  "main": "./src/kettle.js",
+  "main": "./kettle.js",
   "ender": "./src/ender.js",
   "scripts": {
     "builder": "node make/build.js"
