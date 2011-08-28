@@ -1,0 +1,3 @@
+[submodule "support/drag.js"]
+	path = support/drag.js
+	url = https://github.com/logicalparadox/drag.js.git
