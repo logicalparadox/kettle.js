@@ -1,0 +1,23 @@
+{
+  "name": "kettle",
+  "description": "a scrolling content widget based on drag.js",
+  "keywords": ["ender", "drag", "drop", "microjs"],
+  "version": "0.0.1",
+  "homepage": "https://logicalparadox.github.com/kettle.js",
+  "authors": ["Jake Luer <@jakeluer>"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logicalparadox/kettle.js"
+  },
+  "dependencies": {
+    "drag": ">= 0.0.3"
+  },
+  "devDependencies": {
+    "smoosh": "0.3.x"
+  },
+  "main": "./src/kettle.js",
+  "ender": "./src/ender.js",
+  "scripts": {
+    "builder": "node make/build.js"
+  }
+}
