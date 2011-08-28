@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kettle.js - Simple Scroll Widgets for JavaScript</title>
+    <script src="drag.min.js"></script>
+    <script src="move.min.js"></script>
+    <script src="kettle.js"></script>
+    
+    <style>
+      /* Contain floats: h5bp.com/q */
+      .clearfix:before, .clearfix:after { content: ""; display: table; }
+      .clearfix:after { clear: both; }
+      .clearfix { *zoom: 1; }
+      
+      body {
+        margin: 0px;
+        font: 14px/1.5 "helvetica neue", helvetica, arial, sans-serif;
+        color: #8b8b8b;
+        background-color: #eee;
+      }
+      a, a:active, a:visited {
+        color: #4081af;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+      h1, h2, h3 {
+        font-size: 33px;
+        font-weight: normal;
+        color: #333;
+        -webkit-font-smoothing: antialiased;
+      }
+      h2 {
+        display: none;
+        font-size: 33px;
+      }
+      h3 {
+        padding: 5px 0;
+        font-size: 18px;
+        border-bottom: 3px solid #eee;
+      }
+      p.bold {
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      #navigation {
+        width: 160px;
+        padding: 10px 19px 10px 20px;
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        border-left: 1px solid #EEE;
+        left: 50%;
+        margin-left: 280px;
+        color: #777; 
+      }
+      #navigation p {
+        font-size: 11px;
+      }
+      #navigation ul {
+        padding: 0px 0px 0px 15px;
+        margin: 0px;
+      }
+      #navigation ul li {
+        font-size: 11px;
+      }
+      #page {
+        margin: 0px auto;
+        border-left: 1px solid #EEE;
+        border-right: 1px solid #EEE;
+        padding: 20px 239px 20px 19px;
+        width: 700px;
+        background: white;
+      }
+      .source {
+        font-family: monaco, monospace;
+        font-size: 12px;
+        color: #999;
+        margin: 
+      }
+      
+      .scrollable {
+        height: 400px;
+        width: 300px;
+        overflow: hidden;
+        border: 1px #aaa solid;
+        position: relative;
+      }
+      .scrollable .wrap {
+        margin-right: 10px;
+        position: relative;
+        top: 0px;
+      }
+      .scrollable .track-y {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 10px;
+        background-color: #eee;
+      }
+      .scrollable .track-y .handle {
+        position: absolute;
+        width: 10px;
+        background-color: #ccc;
+        top: 0px;
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navigation">
+      <h1>Kettle.js</h2>
+      <p>Kettle.js is a small javascript ui widget that extends <a href="https://github.com/logicalparadox" target="_blank">drag.js</a> to build scrollable content blocks.</p>
+      <p class="bold"><a href="https://github.com/logicalparadox/kettle.js">Fork/Download @ Github</a></p>
+      <p>See github repo for <a href="http://ender.no.de/">Ender</a> installation instructions.</p>
+      <p class="bold">Examples</p>
+      <ul>
+        <li><a href="#example1">Free Range</a></li>
+        <li><a href="#example2">Bind to Axis</a></li>
+        <li><a href="#example3">Limit Movement to Container</a></li>
+        <li><a href="#example4">Event Callbacks</a></li>
+        <li><a href="#example5">Handles</a></li>
+      </ul>
+    </div>
+    <div id="page">
+      <div id="container1" class="scrollable">
+        <div class="track-y"><div class="handle"></div></div>
+        <div class="wrap clearfix">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec justo purus. Nunc id est in libero cursus tempus in sed ipsum. Nullam eu tortor tellus. Duis aliquet est vel quam semper vestibulum. Aliquam erat volutpat. Aenean sed sem sem. Praesent ac lacus orci. Praesent auctor malesuada libero id lobortis. Vivamus in bibendum nibh. Phasellus pellentesque ipsum eget elit ultricies consequat. Proin adipiscing nisl sit amet felis posuere sit amet tincidunt diam tempor. Maecenas consequat ultrices scelerisque. Sed feugiat vehicula dui ac varius. Nulla blandit, urna eget malesuada fringilla, tortor nunc imperdiet erat, sed viverra massa ante id nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <p>Etiam faucibus nibh et odio commodo at tempus felis egestas. Proin rhoncus viverra purus nec aliquet. Nullam felis purus, lobortis in pretium sit amet, interdum id ipsum. Ut ultricies vulputate nisi, ut commodo ante imperdiet eu. Nullam fermentum nunc at arcu vulputate nec facilisis est congue. Integer varius, sapien at adipiscing scelerisque, est arcu laoreet enim, ac hendrerit quam mauris eget neque. Nunc eleifend eleifend erat, non vulputate sem pulvinar eget.</p>
+          <p>Fusce tincidunt tincidunt ornare. Nunc id velit tempus neque imperdiet iaculis. Praesent convallis risus urna. Sed ut hendrerit diam. Mauris eget augue vitae odio malesuada convallis sit amet sit amet turpis. In consequat pellentesque lorem, quis placerat lectus placerat a. Nullam ante nisl, gravida ac hendrerit nec, sagittis ut nulla. Duis faucibus rutrum turpis, rutrum facilisis mi bibendum a. Morbi suscipit mollis ipsum suscipit lobortis.</p>
+          <p>Nam sagittis purus at orci dignissim non mattis odio venenatis. In dignissim, libero vitae semper interdum, tortor nulla dignissim felis, non viverra augue velit sed diam. Donec quis aliquet orci. Quisque eu enim eros. Integer porta sollicitudin tortor, a molestie ipsum suscipit et. Aliquam at arcu ante, eget dapibus justo. Suspendisse laoreet leo quis turpis adipiscing tincidunt. Mauris arcu dolor, commodo vel porttitor ac, pulvinar in massa. Nam laoreet placerat molestie. Duis erat nulla, malesuada scelerisque gravida at, pharetra non mauris. Curabitur dapibus ornare tortor eget ultricies.</p>
+          <p>Fusce lorem metus, sagittis fringilla interdum ut, molestie et orci. Etiam suscipit laoreet lectus at posuere. In lacinia mattis porta. Suspendisse sodales pharetra odio non faucibus. Integer id ligula mauris. Donec in libero justo, sit amet adipiscing eros. Aenean scelerisque nisl in elit scelerisque non vestibulum libero euismod. Cras quis odio id est commodo vulputate. Nunc tristique imperdiet nibh.</p>
+        </div>
+      </div>
+      <script>
+        kettle('#container1')
+          .elastic()
+          .bind();
+      </script>
+    </div>
+  </body>
+</html>
