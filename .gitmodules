@@ -7,3 +7,6 @@
 [submodule "support/move.js"]
 	path = support/move.js
 	url = https://github.com/visionmedia/move.js.git
+[submodule "support/bean"]
+	path = support/bean
+	url = https://github.com/fat/bean.git
