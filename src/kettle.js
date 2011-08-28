@@ -24,7 +24,6 @@
       this._move = move;
       this._elastic = true;
     } catch (err) {
-      console.log('err', err);
       this._elastic = false;
     }
     return this;
@@ -59,7 +58,8 @@
       if (newYh > maxYh) newYh = maxYh;
       d.value(content, 'top', newYc + 'px');
       d.value(handleY, 'top', newYh + 'px');
-      console.log(delta);
+      e.preventDefault();
+      e.stopPropagation();
     });
     if (is_touch_device) {
       d(content).dragging(function () {
